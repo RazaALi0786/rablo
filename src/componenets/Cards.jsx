@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Cards.css";
+import jsonData from "../Dummy/Dummy.json";
+
 function Cards() {
   const navigate = useNavigate();
-  const [data, setData] = useState([]);
+  const [data, setData] = useState(jsonData);
   const [searchId, setSearchId] = useState("");
 
   useEffect(() => {
